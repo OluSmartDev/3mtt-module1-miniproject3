@@ -1,4 +1,30 @@
 <!DOCTYPE html>
+<!-- 
+Purpose: 
+The objective of this project is to build a Calculator App using HTML, CSS and JavaScript. The application should allow users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.
+
+Requirements:
+1. Use HTML, CSS and JavaScript (no framework required)
+
+2.  A basic HTML layout with the following elements: 
+a) a display screen to show the current iput and result
+b) a button for each digit (0-9)
+c) a button for each operation (addition, subtraction, multiplication, division)
+d) a Clear button to reset the calculator
+e) a button for the equal sign (=) to compute the result
+
+3. Implement functionality using JavaScript to handle the following:
+a) Digit Button clicks to update the display
+b) Operation Button clicks to update the operation
+c) Equal Butoon clicks to compute results
+d Clear Button click to reset the calculator
+
+Use Case:
+The Calculator App built in this project used HTML, CSS and JavaScript to creat a simple calculator that performs basic arithmetic operations. HTML is used for the structure and layout of the app while CSS is used for styling the app to create an appealing user interface. JavaScript is used for the logic and interactiveness of the App by adding clicks event listeners to all the buttons used in the app. Javascript's ForEach method is used to loop through the buttons array and implement the appropriate logic for each button when clicked.
+
+Feedback request:
+Yes. I would like to know how I could do it better.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,32 +34,36 @@
 </head>
 <body>
     <div class="calculator">
-            <input type="text" id="display" placeholder="0">
+            <input type="text" id="display" placeholder="0" readonly>
 
             <div class="button-row">
-                <button type="button">7</button>
-                <button type="button">8</button>
-                <button type="button">9</button>
-                <button type="button" class="clearBtn">C</button>
+                <button type="button" class="digitBtn">7</button>
+                <button type="button" class="digitBtn">8</button>
+                <button type="button" class="digitBtn">9</button>
+                <button type="button" id="clearBtn">C</button>
             </div>
                 <div class="button-row">
-                <button type="button">4</button>
-                <button type="button">5</button>
-                <button type="button">6</button>
-                <button type="button" class="operatorBtn">&divide;</button>
+                <button type="button" class="digitBtn">4</button>
+                <button type="button" class="digitBtn">5</button>
+                <button type="button" class="digitBtn">6</button>
+                <button type="button" class="operatorBtn" value="/">&divide;</button>
+                <!-- <button type="button" class="operatorBtn">/</button> -->
             </div>
                 <div class="button-row">
-                <button type="button">1</button>
-                <button type="button">2</button>
-                <button type="button">3</button>
-                <button type="button" class="operatorBtn">x</button>
+                <button type="button" class="digitBtn">1</button>
+                <button type="button" class="digitBtn">2</button>
+                <button type="button" class="digitBtn">3</button>
+                <button type="button" class="operatorBtn" value="*">x</button>
+                <!-- <button type="button" class="operatorBtn">*</button> -->
             </div>
                 <div class="button-row">
-                <button type="button">0</button>
+                <button type="button" class="digitBtn">0</button>
                 <button type="button" class="operatorBtn">-</button>
                 <button type="button" class="operatorBtn">+</button>
-                <button type="button" class="equalBtn">=</button>
+                <button type="button" id="equalBtn">=</button>
             </div>
-    </div>       
+    </div>
+    
+    <script src="/script.js"></script>
 </body>
 </html>
