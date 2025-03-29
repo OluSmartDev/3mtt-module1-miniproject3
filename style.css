@@ -14,59 +14,77 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    /* background: linear-gradient(45deg, #1a237e, #311b92);  */
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 
 .calculator {
-    min-width: 320px;
+    min-width: 300px;
     margin: 20px;
-    border: 1px solid #717377;
+    border: 1px solid #424242; 
     padding: 20px;
     border-radius: 16px;
-    background: transparent;
-    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background for better readability */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
 }
 
 input#display {
-   width: 90%;
-   background: transparent;
-   box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
-   border: none;
-   margin: 10px;
-   padding: 20px;
-   font-size: 24px;
-   color: #ffffff;
-   text-align: right;
+    width: calc(100% - 20px); 
+    background: rgba(255, 255, 255, 0.1); 
+    border: none;
+    margin: 10px;
+    padding: 15px;
+    font-size: 28px; 
+    color: #e0e0e0; 
+    text-align: right;
+    border-radius: 8px; 
+    overflow-x: auto; 
+    white-space: nowrap; 
 }
 
 input::placeholder {
-    color: #ffffff;
+    color: #bdbdbd; 
 }
 
 button {
     border: none;
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    border-radius: 5px ;
-    background: #717377;
-    font-size: 20px;
-    color: #ffffff;
+    width: 60px; 
+    height: 60px; 
+    margin: 8px; 
+    border-radius: 8px; 
+    background: #424242; 
+    font-size: 22px; 
+    color: #e0e0e0; 
     cursor: pointer;
 }
 
-@media (min-width: 414px) {
-    button {
-        width: 60px;
-        height: 60px;
-        margin: 10px;
-   }
+button:hover {
+    background-color: #616161; /* Hover effect */
 }
 
 #equalBtn {
-    background-color: #FB7C14;
+    background-color: #ff9800; 
 }
 
 .operatorBtn, .clearBtn {
-    color: #FB7C14;
+    color: #ff9800; 
+}
+
+@media (max-width: 400px) { /* Optimize for smaller screens */
+    .calculator {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-size: 18px;
+    }
+
+    input#display {
+        font-size: 24px;
+        padding: 10px;
+    }
 }
